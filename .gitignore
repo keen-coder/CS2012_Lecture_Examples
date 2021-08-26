@@ -1,0 +1,9 @@
+# Eclipse project files / directories
+.metadata/
+.classpath
+.project
+.settings/
+bin/
+
+# Examples from textbook.
+book_examples/
