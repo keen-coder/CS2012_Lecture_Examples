@@ -34,7 +34,13 @@ public class Shape {
 	
 	@Override
 	public String toString() {
-		return "";
+		String result = "";
+		
+		result += "Color:\t\t" + this.color + "\n";
+		result += "isFilled:\t" + this.isFilled + "\n";
+		result += "Date:\t\t" + this.dateCreated + "\n";
+		
+		return result;
 	}
 	
 }

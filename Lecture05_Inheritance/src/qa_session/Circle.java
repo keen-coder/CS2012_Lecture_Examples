@@ -22,4 +22,13 @@ public class Circle extends Shape {
 		double area = Math.PI * Math.pow(this.radius, 2);
 		return area;
 	}
+	
+	@Override
+	public String toString() {
+		String result = super.toString();
+		result += "radius:\t\t" + this.radius;
+		return result;
+	}
+	
+	
 }
