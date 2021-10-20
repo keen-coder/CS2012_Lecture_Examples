@@ -1,18 +1,18 @@
-package book_examples;
+package lecture;
 
 //Super class / Parent Class
-public class GeometricObject {
+public abstract class Shape {
 	private String color = "white";
 	private boolean filled;
 	private java.util.Date dateCreated;
 	
 	/** Construct a default geometric object */
-	public GeometricObject() {
+	public Shape() {
 		dateCreated = new java.util.Date();
 	}
 
 	/** Construct a geometric object with color and filled value */
-	public GeometricObject(String color, boolean filled) {
+	public Shape(String color, boolean filled) {
 		this.dateCreated = new java.util.Date();
 		this.color = color;
 		this.filled = filled;
@@ -20,7 +20,7 @@ public class GeometricObject {
 
 	/** Return color */
 	public final String getColor() {
-		return color;
+		return this.color;
 	}
 
 	/** Set a new color */
@@ -44,24 +44,20 @@ public class GeometricObject {
 		return dateCreated;
 	}
 	
-	public double area() {
-		return 0.0;
-	}
+	public abstract double area();
 	
-	public double perimeter() {
-		return 0.0;
-	}
+	public abstract double perimeter();
 	
 	@Override
 	//format of calling equals: geo1.equals(geo2)
 	public boolean equals(Object other) {
 		//1 use instanceof to check the correct type.
-		if ( !(other instanceof GeometricObject) ) {
+		if ( !(other instanceof Shape) ) {
 			return false;
 		}
 		
 		//2. Cast other, into the correct type.
-		GeometricObject temp = (GeometricObject)other;
+		Shape temp = (Shape)other;
 		
 		//Compare datafields for equailty.
 		boolean isColorEqual = this.color.equals(temp.color);
