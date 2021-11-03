@@ -10,7 +10,6 @@ public class WritingDataToFile {
 	public static void main(String[] args) {
 		File outFile = new File("files/random_numbers.txt");
 		
-		
 		try {
 			PrintWriter pw = new PrintWriter(outFile);
 			
@@ -21,14 +20,9 @@ public class WritingDataToFile {
 			}
 			pw.flush();
 			pw.close();
-			
-			
+		
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		}
-		
-		
-		
 	}
-
 }
