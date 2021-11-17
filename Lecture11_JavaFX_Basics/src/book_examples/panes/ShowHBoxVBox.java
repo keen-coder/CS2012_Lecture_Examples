@@ -18,10 +18,11 @@ public class ShowHBoxVBox extends Application {
   public void start(Stage primaryStage) {
     // Create a border pane 
     BorderPane pane = new BorderPane();
-
+ 
     // Place nodes in the pane
     pane.setTop(new FlagPane(20)); 
     pane.setLeft(getVBox());
+    pane.setCenter(new UserInfoPane());
    
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);

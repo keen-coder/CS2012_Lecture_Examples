@@ -17,33 +17,33 @@ public class ShowArc extends Application {
 		Pane pane = new Pane();
 
 		//Arc new = new Arc(centerX, centerY, radiusX, radiusY, startAngle, length)
-		Arc arc1 = new Arc(150, 100, 80, 80, 45, 120); // Create an arc
+		Arc arc1 = new Arc(150, 100, 80, 80, 30, 35); // Create an arc
 		arc1.setFill(Color.WHITE); // Set fill color
 		arc1.setStroke(Color.BLACK);
 		arc1.setType(ArcType.OPEN); // Set arc type
 		pane.getChildren().add(new Text(210, 40, "arc1: round")); 
 		pane.getChildren().add(arc1); // Add arc to pane
-//
-//		Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90, 35);
-//		arc2.setFill(Color.WHITE);
-//		arc2.setType(ArcType.OPEN);
-//		arc2.setStroke(Color.BLACK);
-//		pane.getChildren().add(new Text(20, 40, "arc2: open")); 
-//		pane.getChildren().add(arc2);
-//
-//		Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180, 35);
-//		arc3.setFill(Color.WHITE);
-//		arc3.setType(ArcType.CHORD);
-//		arc3.setStroke(Color.BLACK);
-//		pane.getChildren().add(new Text(20, 170, "arc3: chord")); 
-//		pane.getChildren().add(arc3);
-//
-//		Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270, 35);
-//		arc4.setFill(Color.GREEN);
-//		arc4.setType(ArcType.CHORD);
-//		arc4.setStroke(Color.BLACK);
-//		pane.getChildren().add(new Text(210, 170, "arc4: chord")); 
-//		pane.getChildren().add(arc4);      
+
+		Arc arc2 = new Arc(150, 100, 80, 80, 30 + 90, 35);
+		arc2.setFill(Color.WHITE);
+		arc2.setType(ArcType.OPEN);
+		arc2.setStroke(Color.BLACK);
+		pane.getChildren().add(new Text(20, 40, "arc2: open")); 
+		pane.getChildren().add(arc2);
+
+		Arc arc3 = new Arc(150, 100, 80, 80, 30 + 180, 35);
+		arc3.setFill(Color.WHITE);
+		arc3.setType(ArcType.ROUND);
+		arc3.setStroke(Color.BLACK);
+		pane.getChildren().add(new Text(20, 170, "arc3: chord")); 
+		pane.getChildren().add(arc3);
+
+		Arc arc4 = new Arc(150, 100, 80, 80, 30 + 270, 35);
+		arc4.setFill(Color.GREEN);
+		arc4.setType(ArcType.CHORD);
+		arc4.setStroke(Color.BLACK);
+		pane.getChildren().add(new Text(210, 170, "arc4: chord")); 
+		pane.getChildren().add(arc4);      
 
 //		Arc arc = new Arc(200, 200, 50, 100, -105, -100);
 //		pane.getChildren().add(arc);

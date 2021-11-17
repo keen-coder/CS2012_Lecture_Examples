@@ -20,9 +20,10 @@ public class ShowCircle extends Application {
 		circle.setFill(Color.WHITE);
 		
 		Circle circle2 = new Circle();
-		circle2.setCenterX(300);
-		circle2.setCenterX(400);
+		circle2.setCenterX(50);
+		circle2.setCenterY(400);
 		circle2.setRadius(75);
+		circle2.setFill(Color.DARKBLUE);
 		
 		Circle circle3 = new Circle();
 		circle3.setRadius(25);

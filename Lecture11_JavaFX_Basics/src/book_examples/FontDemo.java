@@ -6,6 +6,7 @@ import java.util.Random;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
@@ -32,10 +33,17 @@ public class FontDemo extends Application {
     // Create a label and set its properties
     Label label = new Label("JavaFX");
   
-    Font font1 = Font.font("Consolas", FontWeight.EXTRA_BOLD, 
-    						FontPosture.ITALIC, 50);
+    Font font1 = Font.font("Calibri", FontWeight.SEMI_BOLD, 
+    						FontPosture.REGULAR, 50);
     label.setFont(font1);
+    
+    Button bt1 = new Button("Hello World");
+    //bt1.setFont(font1);
+    
     pane.getChildren().add(label);
+    pane.getChildren().add(bt1);
+    
+    
 
     // Create a scene and place it in the stage
     Scene scene = new Scene(pane);

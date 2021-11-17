@@ -5,6 +5,7 @@ import java.util.Random;
 
 import javafx.application.Application;
 import javafx.scene.Scene;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Ellipse;
@@ -14,7 +15,7 @@ public class ShowEllipse extends Application {
 	@Override // Override the start method in the Application class
 	public void start(Stage primaryStage) {   
 		// Create a pane
-		StackPane pane = new StackPane();
+		Pane pane = new StackPane();
 
 		Random r = new Random();
 
@@ -24,7 +25,7 @@ public class ShowEllipse extends Application {
 //			int yRadius = r.nextInt(50) + 50;
 			
 			//Ellipse name = new Ellipse(centerX, centerY, radiusX, radiusY); 	
-			Ellipse e1 = new Ellipse(150, 100, 200, 100);
+			Ellipse e1 = new Ellipse(150, 100, 150, 75);
 			e1.setFill(Color.color(Math.random(), Math.random(),
 					Math.random()));
 			//e1.setFill(Color.WHITE);

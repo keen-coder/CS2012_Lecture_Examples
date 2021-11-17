@@ -19,14 +19,14 @@ public class ShowPolygon2 extends Application {
 		polygon.setStroke(Color.BLACK);
 		ObservableList<Double> list = polygon.getPoints();
 		
-		list.add(0.0);
-		list.add(0.0);
+		list.add(10.0);
+		list.add(10.0);
 		list.add(300.0);
 		list.add(250.0);
 		list.add(150.0);
 		list.add(450.0);
 		list.add(75.0);
-		
+		list.add(100.0);
 		
 		
 		

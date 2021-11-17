@@ -30,16 +30,15 @@ public class ShowRectangle extends Application {
     pane.getChildren().add(r2);
     
     Rectangle r3 = new Rectangle(25, 90, 60, 30);
-    r3.setArcWidth(15);
-    r3.setArcHeight(15);    
+    r3.setArcWidth(12);
+    r3.setArcHeight(12);    
     pane.getChildren().add(new Text(10, 107, "r3"));
     pane.getChildren().add(r3);
     
     for (int i = 0; i < 10; i++) {
       Rectangle r = new Rectangle(100, 50, 100, 30);
       r.setRotate( (i * 360) / 20);
-      r.setFill(Color.color(Math.random(), Math.random(), 
-          Math.random()));
+      r.setFill(Color.color(Math.random(), Math.random(), Math.random()));
       r.setArcWidth(15);
       r.setArcHeight(15); 
       //r.setFill(Color.WHITE);

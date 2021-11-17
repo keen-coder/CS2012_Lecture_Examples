@@ -19,7 +19,7 @@ public class ShowImage extends Application {
 		pane.setPadding(new Insets(25, 25, 25, 25));
 
 		//Path is relative to src folder for JavaFX resources.
-		Image image = new Image("images/us.gif");
+		Image image = new Image("images/ca.gif");
 
 		pane.getChildren().add(new ImageView(image));
 

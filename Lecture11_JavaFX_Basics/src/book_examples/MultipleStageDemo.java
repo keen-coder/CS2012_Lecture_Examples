@@ -13,7 +13,7 @@ public class MultipleStageDemo extends Application{
 	@Override 
 	public void start(Stage primaryStage) {
 		// Create a scene and place a button in the scene
-		Scene scene = new Scene(new StackPane(new Button("OK")), 300, 300);
+		Scene scene = new Scene(new StackPane(new Button("OK")), 700, 300);
 
 		primaryStage.setTitle("MyJavaFX"); // Set the stage title
 		primaryStage.setScene(scene); // Place the scene in the stage
