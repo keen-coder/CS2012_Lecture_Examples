@@ -15,7 +15,6 @@ public class KeyEventDemo extends Application {
 		Text text = new Text(20, 20, "A");
 
 		pane.getChildren().add(text);
-
 		text.setOnKeyPressed(e -> { 
 			
 			KeyCode kc = e.getCode();
@@ -40,7 +39,7 @@ public class KeyEventDemo extends Application {
 		primaryStage.setScene(scene); // Place the scene in the stage
 		primaryStage.show(); // Display the stage
 
-		text.requestFocus(); // text is focused to receive key input
+		//text.requestFocus(); // text is focused to receive key input
 	}
 
 	/**

@@ -12,6 +12,7 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
@@ -29,37 +30,36 @@ public class ControlCircleWithLambdaExpressions extends Application {
 		Button btEnlarge = new Button("Enlarge");
 		Button btShrink = new Button("Shrink");
 
-		btEnlarge.setOnAction(event -> {
+		btEnlarge.setOnAction( event -> {
 			circlePane.enlarge();
 		});
 
 		btShrink.setOnAction(event -> {
 			circlePane.shrink();
 		});
-
-		this.circlePane.getCircle().setOnMouseClicked(event -> {
+		
+		
+		
+	
+		
+		circlePane.getCircle().setOnMouseClicked(event -> {
 			Random r = new Random();
 			
-			int red = r.nextInt(256);
-			int green = r.nextInt(256);
-			int blue = r.nextInt(256);
+			int randomRed = r.nextInt(256);
+			int randomGreen = r.nextInt(256);
+			int randomBlue= r.nextInt(256);
 			
-			Color randColor = Color.rgb(red, green, blue, 1.0);
+			Color randomColor = Color.rgb(randomRed, randomGreen, randomBlue);
 			
-			this.circlePane.getCircle().setFill(randColor);
+			circlePane.getCircle().setFill(randomColor);
 		});
 		
-		this.circlePane.getCircle().setOnMouseDragged(event -> {	
-			double xLoc = event.getX();
-			double yLoc = event.getY();
-			
-			this.circlePane.getCircle().setCenterX(xLoc);
-			this.circlePane.getCircle().setCenterY(yLoc);
-		});
 		
-		this.circlePane.setOnMouseMoved(event -> {
-			System.out.println(event.getX() + ", " + event.getY());
-		});
+		
+		
+		circlePane.getCircle().setOnMouseDragged(createCircleDragHandler());
+		
+		
 
 		hBox.getChildren().add(btEnlarge);
 		hBox.getChildren().add(btShrink);
@@ -94,5 +94,17 @@ public class ControlCircleWithLambdaExpressions extends Application {
 	 */
 	public static void main(String[] args) {
 		launch(args);
+	}
+	
+	public EventHandler<MouseEvent> createCircleDragHandler() {
+		EventHandler<MouseEvent> dragCircleHandler = event -> {
+			double mouseXLocation = event.getX();
+			double mouseYLocation = event.getY();
+			
+			circlePane.getCircle().setCenterX(mouseXLocation);
+			circlePane.getCircle().setCenterY(mouseYLocation);
+		};
+		
+		return dragCircleHandler;
 	}
 }

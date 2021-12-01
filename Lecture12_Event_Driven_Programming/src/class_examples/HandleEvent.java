@@ -21,8 +21,8 @@ public class HandleEvent extends Application {
 		
 		//Register event handler with event source object, 
 		//using event registration method.
-		btOK.setOnAction(new BothHandler());
-		btCancel.setOnAction(new BothHandler());
+		btOK.setOnAction(new OKHandler());
+		btCancel.setOnAction(new CancelHandler());
 
 		HBox pane = new HBox(10);
 		pane.setAlignment(Pos.CENTER);
@@ -45,30 +45,14 @@ public class HandleEvent extends Application {
 	}
 }
 
-class BothHandler implements EventHandler<ActionEvent> {
-	@Override
-	public void handle(ActionEvent event) {
 
-		
-		Object eventObject = event.getSource();
-		
-		if ( !(eventObject instanceof Button)) {
-			return;
-		}
-		
-		Button eventButton = (Button)eventObject; 
 
-		System.out.println(eventButton.getText() + " button was clicked.");
-	}
-}
-//								EventHandler<ActionEvent>
-//								EventHandler<MouseEvent>
-//								EventHandler<KeyEvent>
 class OKHandler implements EventHandler<ActionEvent> {
 
 	@Override
 	public void handle(ActionEvent event) {
 		System.out.println("OK button was clicked.");
+		System.out.println("Data will now be processed");
 	}
 }
 
@@ -78,3 +62,20 @@ class CancelHandler implements EventHandler<ActionEvent> {
 		System.out.println("Cancel button clicked");
 	}
 }
+
+//class BothHandler implements EventHandler<ActionEvent> {
+//	@Override
+//	public void handle(ActionEvent event) {
+//
+//		
+//		Object eventObject = event.getSource();
+//		
+//		if ( !(eventObject instanceof Button)) {
+//			return;
+//		}
+//		
+//		Button eventButton = (Button)eventObject; 
+//
+//		System.out.println(eventButton.getText() + " button was clicked.");
+//	}
+//}

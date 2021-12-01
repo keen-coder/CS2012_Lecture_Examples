@@ -35,6 +35,7 @@ public class ControlCircleWithAnonymounsInnerClass extends Application {
 			}
 		});
 		
+		
 		btShrink.setOnAction(new EventHandler<ActionEvent>() {
 			@Override
 			public void handle(ActionEvent event) {
